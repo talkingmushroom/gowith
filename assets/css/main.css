@@ -18,6 +18,7 @@ header {
   padding: 0 18px;
   background-color: white;
   border-bottom: 1px solid black;
+  border: 1px solid red;
 }
 
 h1.logo a {
@@ -25,103 +26,77 @@ h1.logo a {
   color: rgb(74, 146, 35);
 }
 
-header .nav {
-  display: none;
+header ul li a {
+  color: black;
+  border: 1px solid green;
 }
 
-@media (max-width: 768px) {
-  #moBtn {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    left: 10px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 30px;
-    height: 30px;
-    border: 1px solid red;
-  }
-
-  #moBtn span {
-    display: block;
-    width: 100%;
-    height: 3px;
-    background-color: rgb(74, 146, 35);
-  }
-
-  #moBtn.on span:first-child,
-  #moBtn.on span:last-child {
-    position: absolute;
-    top: 50%;
-  }
-
-  #moBtn.on span:first-child {
-    transform: rotate(45deg);
-  }
-
-  #moBtn.on span:last-child {
-    transform: rotate(-45deg);
-  }
-
-  #moBtn.on span:nth-child(2) {
-    display: none;
-  }
-
-  header.flex-box {
-    justify-content: flex-start;
-  }
-
-  nav {
-    position: fixed;
-    top: 68px;
-    left: -100%;
-    height: 100%;
-    background-color: white;
-    transition: 0.5s;
-  }
-
-  nav.on {
-    left: 0;
-  }
-
-  nav ul {
-    flex-direction: column;
-  }
-
-  nav ul li {
-    width: 100%;
-  }
-
-  nav ul li a {
-    display: block;
-    width: 100%;
-    height: 100%;
-    padding: 20px;
-  }
-
-  nav ul li.on a {
-    border-bottom: 2px solid green;
-  }
-
-  header nav ul {
-    gap: 0;
-  }
+nav ul {
+  flex-direction: column;
 }
 
-.visual {
+nav ul li {
   width: 100%;
-  height: calc(100vh - 68px);
 }
 
-.visual .bg-box {
-  width: 100%;
-  height: 100%;
-}
-
-.bg-box img {
+nav ul li a {
   display: block;
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  padding: 20px;
+}
+
+/* header ul li a:hover {
+  opacity: 0.8;
+  transition: 0.5s;
+} */
+
+/* header .main-menu-wrap {
+  gap: 40px;
+} */
+
+/* header nav ul {
+  gap: 40px;
+} */
+
+.visual {
+  position: relative;
+  padding-bottom: 100px;
+}
+
+#moBtn {
+  display: flex;
+  position: absolute;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 24px;
+  height: 24px;
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  border: 1px solid red;
+}
+
+#moBtn.toggle {
+  justify-content: center;
+}
+
+#moBtn span {
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: black;
+  transition: all 0.3s;
+}
+
+.toggle .line1 {
+  transform: rotate(-45deg);
+}
+
+.toggle .line2 {
+  opacity: 0;
+}
+
+.toggle .line3 {
+  transform: rotate(45deg) translate(-2px, -2px);
 }
