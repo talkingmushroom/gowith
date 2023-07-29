@@ -1,4 +1,5 @@
 const moBtn = document.getElementById('moBtn');
+const header = document.querySelector('header');
 moBtn.addEventListener('click', () => {
-  moBtn.classList.toggle('toggle');
+  header.classList.toggle('on');
 });
