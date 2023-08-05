@@ -37,24 +37,38 @@
           <li class="swiper-slide"><img src="/assets/img/main_slide-2.jpeg" alt="" /></li>
           <li class="swiper-slide"><img src="/assets/img/main_slide-3.jpeg" alt="" /></li>
         </ul>
+        <div class="swiper-pagination"></div>
       </div>
     </section>
     <script>
       new Swiper('.swiper', {
-        // autoplay: true,
+        autoplay: {
+          delay: 10000,
+        },
         loop: true,
         loopAdditionalSlides: 1,
         slidesPerView: 1,
         spaceBetween: 0,
-        delay: 9000,
         centeredSlides: false,
         allowTouchMove: true,
-        navigation: {
-          prevEl: '.swiper-button-prev',
-          nextEl: '.swiper-button-next',
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true,
+          type: 'bullets',
         },
       });
     </script>
+    <div class="portfolio-txt flex-box">
+      <h2>
+        <p>포트폴리오</p>
+      </h2>
+    </div>
+    <div class="container">
+      <div class="item"><img src="assets/img/out.jpeg" alt="" /></div>
+      <div class="item"><img src="assets/img/in.jpg" alt="" /></div>
+      <div class="item"><img src="assets/img/yeongeuk.jpg" alt="" /></div>
+      <div class="item"><img src="assets/img/bangsong.jpeg" alt="" /></div>
+    </div>
   </body>
 </html>
 <script src="/assets/js/main.js"></script>
