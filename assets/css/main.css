@@ -109,7 +109,7 @@ header.on #moBtn .line3 {
 .visual {
   position: relative;
   z-index: 1;
-  padding-bottom: 50px;
+  padding-bottom: 130px;
 }
 
 .swiper-slide {
@@ -130,10 +130,28 @@ header.on #moBtn .line3 {
   margin: 0 10px !important;
 }
 
+/* 고위드소개 */
+.gowith-profile {
+  padding-bottom: 130px;
+}
+
+.gowith-profile h2 {
+  text-align: center;
+  padding-bottom: 90px;
+  color: rgb(74, 146, 35);
+}
+
+.gowith-profile p {
+  text-align: center;
+  font-family: sans-serif;
+  color: black;
+}
+
 /* 포트폴리오 */
 .portfolio-txt {
   justify-content: center;
-  padding-bottom: 20px;
+  padding-bottom: 30px;
+  color: rgb(74, 146, 35);
 }
 
 .container {
@@ -143,13 +161,28 @@ header.on #moBtn .line3 {
 }
 
 .container .item {
+  position: relative;
+  display: block;
+  width: 50vw;
+  height: 50vw;
+  padding: 30px;
   border: 1px solid black;
 }
 
 .container .item img {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover;
+}
+
+.container .item:hover img {
+  opacity: 0.5;
+}
+
+.container .item:hover h3 {
+  color: black;
 }
 
 .container .item:nth-child(2n) {
@@ -159,4 +192,19 @@ header.on #moBtn .line3 {
 .container .item:nth-child(1),
 .container .item:nth-child(2) {
   border-bottom: 0;
+}
+
+.container .item h3 {
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  cursor: default;
+  font-family: sans-serif;
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .container .item h3 {
+    font-size: 15px;
+  }
 }
